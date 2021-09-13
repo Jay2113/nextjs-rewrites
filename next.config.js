@@ -2,8 +2,7 @@ module.exports = {
   reactStrictMode: true,
   trailingSlash: true,
   async rewrites() {
-    return {
-      fallback: [
+    return [
         // These rewrites are checked after both pages/public files
         // and dynamic routes are checked
         {
@@ -14,7 +13,6 @@ module.exports = {
           source: '/:path*',
           destination: 'https://production.d26rnk3qbcbxwm.amplifyapp.com/:path*',
         },
-      ],
-    }
+      ]
   },
 }
